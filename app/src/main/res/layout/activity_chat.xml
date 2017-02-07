@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@android:color/white"
+    tools:context="in.co.codoc.chatdemo.ChatActivity">
+    <RelativeLayout android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:id="@+id/toolbar"
+        android:background="@color/colorPrimary"
+        android:paddingTop="0dp"
+        xmlns:android="http://schemas.android.com/apk/res/android">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Codoc Chat"
+            android:textColor="@android:color/white"
+            android:id="@+id/mytext"
+            android:textSize="17dp"
+            android:layout_centerVertical="true"
+            android:layout_centerInParent="true"
+            android:layout_centerHorizontal="true" />
+        <ImageButton
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            android:onClick="image"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/ic_attach_file"
+            android:background="@null"
+            android:layout_centerVertical="true"/>
+    </RelativeLayout>
+    <ListView
+        android:id="@+id/message_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/bottom"
+        android:layout_below="@+id/toolbar"
+        android:paddingBottom="8dp"
+        android:divider="@android:color/transparent"
+        android:stackFromBottom="true"
+        android:transcriptMode="alwaysScroll"
+        android:dividerHeight="10dp"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="60dp"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/bottom">
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="4"
+            android:hint="Type message.."
+            android:id="@+id/message"/>
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:text="Send"
+            android:onClick="send"/>
+    </LinearLayout>
+</RelativeLayout>

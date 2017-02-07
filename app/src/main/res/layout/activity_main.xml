@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="in.co.codoc.chatdemo.MainActivity">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+    <EditText
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/report_id"
+        android:text="0"
+        android:hint="report_id"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/user_id"
+            android:text="1"
+            android:hint="User_id"/>
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/expert_id"
+            android:text="2"
+            android:hint="expert_id"/>
+    <Button
+        android:layout_width="180dp"
+        android:layout_height="50dp"
+        android:onClick="send"
+        android:text="send"
+        android:visibility="gone"
+        android:layout_below="@+id/message"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="10dp"
+        android:text="msessage from server"
+        android:id="@+id/rmessage" />
+    </LinearLayout>
+    <Button
+        android:layout_width="180dp"
+        android:layout_height="50dp"
+        android:onClick="connect"
+        android:text="Start"
+        android:layout_marginBottom="10dp"
+        android:layout_alignParentBottom="true"/>
+
+
+</RelativeLayout>
