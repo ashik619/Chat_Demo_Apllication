@@ -62,13 +62,13 @@ public class ChatActivity extends AppCompatActivity {
     String expert_id;
     String user_id;
     Socket mSocket;
-    String chatUrl = "http://52.55.139.178:3001";
+    String chatUrl = "Your Chat server url";
     ListView listView;
     EditText sendMsgView;
     String sendMsg;
     ArrayList<Message> messages;
     UsersAdapter adapter;
-    String filePath = "/storage/emulated/0/WhatsApp/Media/WhatsApp Images/IMG-20170201-WA0003.jpg";
+    //String filePath = "/storage/emulated/0/WhatsApp/Media/WhatsApp Images/IMG-20170201-WA0003.jpg";
     boolean textMsgFlag = false;
     boolean captureFlag;
     final CharSequence[] AdbItems = {
